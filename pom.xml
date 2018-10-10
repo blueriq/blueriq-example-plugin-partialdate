@@ -1,0 +1,70 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.blueriq</groupId>
+	<artifactId>plugin-partialdate</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<name>Partial Date Plugin</name>
+	<packaging>war</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<com.blueriq.version>11.4.1.4511</com.blueriq.version>
+
+		<!-- Maven plugin versions -->
+		<maven-war-plugin.version>3.2.0</maven-war-plugin.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven-war-plugin.version}</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.blueriq</groupId>
+				<artifactId>blueriq-runtime-parent</artifactId>
+				<version>${com.blueriq.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Dependency to create Blueriq war-file -->
+		<dependency>
+			<groupId>com.blueriq</groupId>
+			<artifactId>blueriq-runtime-boot-starter</artifactId>
+		</dependency>
+
+		<!-- test -->
+		<dependency>
+			<groupId>com.blueriq</groupId>
+			<artifactId>blueriq-sdk-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+</project>
