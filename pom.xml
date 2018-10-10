@@ -18,6 +18,7 @@
 	</properties>
 
 	<build>
+		<finalName>Runtime</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
