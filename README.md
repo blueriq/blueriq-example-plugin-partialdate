@@ -46,7 +46,7 @@ The partial date input and the derived date are coupled by naming convention (th
 To compile and build war use:
 
 ```
-mvn clean verify -DskipTests`
+mvn clean verify -DskipTests
 ```
 
 To test the war, please add the Blueriq `license.aql` to `src\test\resources` and use:
@@ -67,6 +67,10 @@ Start Tomcat container with the following parameters:
 -Dspring.config.additional-location=file://path_to_conf/ # URI of the configuration folder which contains the Blueriq license.
 -Dspring.profiles.active=native,development-tools
 ```
+
+# Blueriq version
+
+This plugin was built on Blueriq 11 (using the project starter).
 
 [logo]: https://www.blueriq.com/Static/images/logo_gradient.svg
 [website]: http://www.blueriq.com
