@@ -12,7 +12,7 @@ The missing parts in a partial date are substituted with a 0, so these are some 
 
 0-0-0
 
-With a partial date you can express that someone was born in 1960, without knowing the exact month and day. As you can image, once you have to determine the age of that person, you still need to convert the partial date to a regular date to perform calculations on. That is what this plugin does. Next to that, it also checks that partial dates are valid, because when for instance the day of a date is known, it is actually a regular date so the month cannot be unknown.
+With a partial date you can express that someone was born in 1960, without knowing the exact month and day. As you can imagine, once you have to determine the age of that person, you still need to convert the partial date to a regular date to perform calculations on. That is what this plugin does. Next to that, it also checks that partial dates are valid, because when for instance the day of a date is known, it is actually a regular date so the month cannot be unknown.
 
 The plugin contains two custom components that extend Blueriq to handle this problem: an *external rule* and a *validation type*. These are standard extension points in Blueriq for which you can write custom code to solve problems that Blueriq currently cannot handle. 
 
